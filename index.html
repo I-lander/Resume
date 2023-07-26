@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilan VARILLON</title>
+    <link rel="icon" href="./Images/godLogo.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showPresentation()">Présentation</button>
+        <button onclick="showWork()">Projets</button>
+        <button onclick="showContact()">Contact</button>
+    </nav>
+    <div class="container">
+
+        <div class="presentation" id="presentation">
+            <div class="profile">
+                <h1>Ilan Varillon</h1>
+                <h2>Développeur autodidacte</h2>
+                <p>Geek dans l'âme et passioné par l'informatique, je me suis toujours formé seul quand l'envie me prenait.<br>
+                    Je considère chaque prise de poste comme un nouveau challenge et surtout l'opportunité d'apprendre de nouvelles technologies.<br>
+                    Depuis quelques années, j'apprend à coder et j'ai réussi à mener à bien plusieurs projets personnels.<br><br>
+                    Les jeux vidéo étant mon autre passion, je l'utilise pour apprendre à coder. <br>
+                    J'ai ainsi créer à ce jour deux jeux dont un jeu en ligne.<br><br>
+                    Javascript d'abord, j'ai appris dans un contexte professionnel à coder avec React et Angular. Mais également Python et Java.<br>
+                    Le C# vient compléter la liste afin de développer mon jeu sur Unity. <br>
+                    Je n'ai donc pas peur d'apprendre ; c'est d'ailleur le contraire ! Je me nourris de challenge et de défis. <br><br>
+                    Il me reste beaucoup à apprendre mais je considère que d'en être conscient me permet de toujours avancer !
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="./Images/HTML5.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/CSS.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/JavaScript.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/react.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/Angular.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/Typescript.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/python.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/c_sharp.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/ChatGPT.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/Git_format.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/GitHub.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/Unity.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/Postgresql.png">
+                </div>
+                <div class="skill">
+                    <img src="./Images/Sql.png">
+                </div>
+            </div>
+        </div>
+        <div class="work" id="work">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="project">
+                        <div class="screenshots">
+                            <img src="./Images/delements_screenshot-2.png">
+                        </div>
+                        <div class="project-content">
+                            <h3>Délements</h3>
+                            <p>Délements est un jeu développé sur Unity.<br>
+                                Mon but en me lançant dans ce projet était d'apprendre le C#.<br>
+                                Il s'agit d'un jeu sur damier qui se joue avec des dés.<br>
+                                Chaque dés pocède 3 faces différentes et le but est de bouffer les dés adverse avec un système proche de pierre / feuille /ciseaux.<br>
+                                Il est jouable en ligne et sera très prochainement disponible sur Android et Steam.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./Images/bereshit_screen.png">
+                        <div class="project-content">
+                            <h3>Bereshit</h3>
+                            <p>Bereshit est un jeu développé entièrement en Javascript.<br>
+                                Le but initial était pour moi de créer un jeu en Javascript Vanilla sans l'aide d'aucune librairie extérieur.<br>
+                                C'est avec ce jeu que j'ai appris les bases de la programmation orienté objet.<br>
+                                Le jeu consiste à défendre une unité central représentant une divinité. <br>
+                                Pour se faire, le joueur dispose de différentes cartes avec des effets différents lui permettant par exemple de tuer ses ennemies ou de créer des ressources.<br>
+                                Il est jouable gratuitement en ligne via le lien :<br>
+                                <a href="https://i-lander.github.io/GameProject/" target="_blank"><img class="link-logo" src="./Images/godLogo.png"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./Images/tarot_screen.png">
+                        <div class="project-content">
+                            <h3>Les lectures de l'âne</h3>
+                            <p>Depuis que Chat GPT a été mis en ligne, je l'utilise au quotidien.<br>
+                                J'ai eu l'idée de ce service dans le train en voyant sur mon voisin de devant qu'il consulté un horoscope.<br>
+                                L'idée m'est alors venu de créer un projet autour de ce sujet et utilisant l'API de OpenAI.<br>
+                                Codée en React, l'application permet de poser une question et de recevoir un tirage de trois cartes.<br>
+                                Le modèle génère alors une lecture construite autour de la question et des cartes choisies aléatoirement.<br>
+                                Pour l'instant en accès libre, l'application est accessible ici : <br>
+                                <a href="https://donkeys-readings-lybzq.ondigitalocean.app/" target="_blank"><img class="link-logo" src="./Images/loading_icon.png"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-button"></button>
+            <button class="next-button"></button>
+        </div>
+        <div class="contact" id="contact">
+            <div class="contact-container">
+                <p>06 10 51 33 58</p>
+                <p> ilan.varillon@gmail.com</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ilan-varillon-4498b891/" target="_blank"><img height="64px" src="./Images/LinkedIn_logo_initials.png"></a>
+                    <a href="https://github.com/I-lander" target="_blank"><img height="64px" src="./Images/GitHub.png"></a>
+                </div>
+            </div>
+            <a class="contact-btn" href="./Images/DEV_Ilan_VARILLON_CV_2023.pdf" target="_blank">Télécharger CV</a>
+        </div>
+    </div>
+    <script>
+        function showPresentation() {
+            document.getElementById("presentation").style.display = "block";
+            document.getElementById("work").style.display = "none";
+            document.getElementById("contact").style.display = "none";
+        }
+
+        function showWork() {
+            document.getElementById("presentation").style.display = "none";
+            document.getElementById("work").style.display = "block";
+            document.getElementById("contact").style.display = "none";
+        }
+
+        function showContact() {
+            document.getElementById("presentation").style.display = "none";
+            document.getElementById("work").style.display = "none";
+            document.getElementById("contact").style.display = "block";
+        }
+    </script>
+    <script src="slider.js"></script>
+</body>
+</html>
