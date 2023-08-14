@@ -32,12 +32,16 @@ export class Sun {
   update(ctx) {
     this.draw(ctx);
     this.text.style.opacity = 1;
-    if ((this.id === "other")) {
-      this.text.innerHTML =
-        "<span style='font-size:18px'>Je suis aussi...</span>";
+    if (this.id === "other") {
+      if (this.text.innerHTML === "") {
+        this.text.innerHTML =
+          "<span style='font-size:18px'>Je suis aussi...</span>";
+      }
     } else {
-      this.text.innerHTML =
-        "<span style='font-size:18px'>Survolez les planêtes pour qu'elles arrêtent de tourner.</span>";
+      if (this.text.innerHTML === "") {
+        this.text.innerHTML =
+          "<span style='font-size:18px'>Survolez les planêtes pour qu'elles arrêtent de tourner.</span>";
+      }
     }
   }
 }

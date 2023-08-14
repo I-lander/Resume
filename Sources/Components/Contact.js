@@ -27,8 +27,10 @@ export class Contact {
       this.elementTuto.style.opacity = this.opacity;
       this.elementTuto.style.textAlign = `center`;
       this.elementTuto.style.fontSize = "24px";
-      this.elementTuto.innerHTML = `<p>Pour vous déplacer, cliquer et glisser dans la direction souhaitée.</br>
+      if (this.elementTuto.innerHTML == "") {
+        this.elementTuto.innerHTML = `<p>Pour vous déplacer, cliquer et glisser dans la direction souhaitée.</br>
         Suivez les <img style='width:32px; margin-top:8px; display:inline;' src='./Sources/Images/compass.png'> pour vous diriger vers les systèmes.</p>`;
+      }
     }
 
     this.elementH1.style.left = `${screenX - this.dimensions.width / 2}px`;
@@ -37,7 +39,9 @@ export class Contact {
     this.elementH1.style.height = `${this.dimensions.height}px`;
     this.elementH1.style.color = "white";
     this.elementH1.style.opacity = this.opacity;
-    this.elementH1.innerHTML = "<h1>Ilan Varillon</h1>";
+    if (this.elementH1.innerHTML == "") {
+      this.elementH1.innerHTML = "<h1>Ilan Varillon</h1>";
+    }
 
     this.elementText.style.left = `${screenX - this.dimensions.width / 2}px`;
     this.elementText.style.top = `${screenY - 25}px`;
@@ -45,8 +49,10 @@ export class Contact {
     this.elementText.style.height = `${this.dimensions.height}px`;
     this.elementText.style.color = "white";
     this.elementText.style.opacity = this.opacity;
-    this.elementText.innerHTML =
-      "<p>06 10 51 33 58</p>" + "<p> ilan.varillon@gmail.com</p>";
+    if (this.elementText.innerHTML == "") {
+      this.elementText.innerHTML =
+        "<p>06 10 51 33 58</p>" + "<p> ilan.varillon@gmail.com</p>";
+    }
     if (this.opacity > 0) {
       let linkedinButton = document.getElementById("linkedin");
       if (!linkedinButton) {

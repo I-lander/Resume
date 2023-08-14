@@ -6,7 +6,7 @@ export class HtmlPlanet extends Planet {
     this.image = document.getElementById("html");
     this.id = "html";
     this.text =
-      "<p><p style='text-align:center'>Mon niveau sur</br> <b>HTML<b> :</br> ★★★★☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>HTML<b> :</br> ★★★★☆</p>";
   }
 }
 export class CssPlanet extends Planet {
@@ -116,11 +116,12 @@ export class DelementPlanet extends Planet {
     this.text =
       "<h3 style='text-align:center'>Délements</h3>" +
       "<p>Délements est un jeu développé sur Unity." +
+      "C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
       "Mon but en me lançant dans ce projet était d'apprendre le C#.<br>" +
-      "C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience.<br>" +
-      "Le défi que je me suis imposé pour ce jeu est de le rendre jouable en ligne.<br>" +
-      "Ainsi, deux joueurs peuvent jouer ensemble en crossplatform.<br>" +
+      "Le défi que je me suis imposé pour ce jeu est de le rendre jouable en ligne en crossplatform.<br>" +
       "Très prochainement disponible sur Android et Steam.<br>" +
+      "Disponible sur demande.<br>" +
+      "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/DiceyChess/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
       "</p>";
   }
 }
@@ -131,9 +132,8 @@ export class BereshitPlanet extends Planet {
     this.id = "bereshit";
     this.text =
       "<h3 style='text-align:center'>Bereshit</h3>" +
-      "<p>Bereshit est un jeu développé entièrement en Javascript.<br>" +
-      "Le but initial était pour moi de créer un jeu en Javascript Vanilla sans l'aide d'aucune librairie extérieure.<br>" +
-      "C'est avec ce jeu que j'ai appris les bases de la programmation orientée objet.<br>" +
+      "<p>Ma première création, c'est avec lui que j'ai appris les bases de la programmation orientée objet.<br>" +
+      "Le but initial était pour moi de coder en Javascript Vanilla sans l'aide d'aucune librairie extérieure.<br>" +
       "Il est jouable gratuitement sur navigateur via le lien suivant :<br> " +
       "<a class='link' href='https://i-lander.github.io/GameProject/' target='_blank'><img class='repo-link' src='./Sources/Images/bereshit.png'></a><br>" +
       "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/GameProject/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
@@ -148,8 +148,7 @@ export class DonkeyReadingsPlanet extends Planet {
     this.text =
       "<h3>Les lectures de l'âne</h3>" +
       "<p>Depuis que Chat GPT a été mis en ligne, je l'utilise au quotidien.<br>" +
-      "J'ai eu l'idée de ce service dans le train en voyant sur mon voisin de devant qu'il consulté un horoscope.<br>" +
-      "L'idée m'est alors venu de créer un projet autour de ce sujet et utilisant l'API de OpenAI.<br>" +
+      "J'ai eu l'idée de ce service dans le train en voyant mon voisin de devant qui consultait un horoscope.<br>" +
       "Codée en React, l'application permet de poser une question et de recevoir un tirage de trois cartes.<br>" +
       "Le modèle génère alors une lecture construite autour de la question et des cartes choisies aléatoirement.<br><br>" +
       "Pour l'instant en accès libre, l'application est accessible ici :<br>" +
@@ -167,7 +166,7 @@ export class ResumePlanet extends Planet {
       "<h3>Mon site CV</h3>" +
       "<p>Ce site peut lui-même être considéré comme l'un de mes projets ^^.<br>" +
       "J'ai eu envie de créer un CV plus original qui dépasse la simple feuille A4.<br>" +
-      "L'idée m'est alors venu de combiner mes compétence et mon amour pour la création de jeu.<br>" +
+      "L'idée m'est alors venue de combiner mes compétences et mon amour pour la création de jeu.<br>" +
       "Développé entièrement en Javascript vanilla, il m'a permis également de faire un point sur ma montée en compétence et sur ma compréhension de la programmation.<br><br>" +
       "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/Resume' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
       "</p>";

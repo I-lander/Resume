@@ -61,6 +61,7 @@ canvas {
 }
 .linkedinButton img {
   display: block;
+  user-select: none;
 }
 
 .resumeButton {
@@ -80,10 +81,17 @@ canvas {
   color: white;
   font-size: 18px;
   user-select: none;
+  pointer-events: none;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.planetText .link {
+  pointer-events: all;
+  width: 50px;
+  margin: auto;
 }
 
 .repo-link {

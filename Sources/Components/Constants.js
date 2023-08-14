@@ -51,17 +51,17 @@ const soft8Planet = new Soft8Planet(60, otherSun.orbitInterval * 9, otherSun);
 const soft9Planet = new Soft9Planet(60, otherSun.orbitInterval * 10, otherSun);
 const delementPlanet = new DelementPlanet(
   50,
-  projectsSun.orbitInterval * 6,
+  projectsSun.orbitInterval * 10,
   projectsSun
 );
 const bereshitPlanet = new BereshitPlanet(
   50,
-  projectsSun.orbitInterval * 8,
+  projectsSun.orbitInterval * 6,
   projectsSun
 );
 const donkeyReadingsPlanet = new DonkeyReadingsPlanet(
   50,
-  projectsSun.orbitInterval * 10,
+  projectsSun.orbitInterval * 8,
   projectsSun
 );
 const resumePlanet = new ResumePlanet(

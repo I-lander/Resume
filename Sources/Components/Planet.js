@@ -55,10 +55,31 @@ export class Planet {
         planetText = document.createElement("div");
         planetText.id = this.id;
         planetText.classList.add("planetText");
-        planetText.innerHTML = this.text;
+        if (planetText.innerHTML == "") {
+          planetText.innerHTML = this.text;
+        }
         planetText.style.position = "fixed";
         planetText.style.zIndex = 10000;
         document.body.appendChild(planetText);
+        const links = document.querySelectorAll(".link");
+        if (links) {
+          links.forEach(function (link) {
+            link.addEventListener("touchstart", function (e) {
+              console.log("Touched!");
+
+              let targetElement = e.target;
+              if (
+                targetElement.tagName.toLowerCase() === "img" &&
+                targetElement.parentElement.tagName.toLowerCase() === "a"
+              ) {
+                targetElement = targetElement.parentElement;
+              }
+              if (targetElement.tagName.toLowerCase() === "a") {
+                window.open(targetElement.href, '_blank');
+              }
+            });
+          });
+        }
       }
       planetText.style.width = `${textSize}px`;
       planetText.style.height = `${textSize}px`;
