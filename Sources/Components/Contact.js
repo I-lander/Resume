@@ -21,13 +21,14 @@ export class Contact {
       this.elementTuto.style.left = `${0}px`;
       this.elementTuto.style.top = `${0}px`;
       this.elementTuto.style.width = `${innerWidth}px`;
-      this.elementTuto.style.height = `${52}px`;
+      this.elementTuto.style.height = `auto`;
       this.elementTuto.style.color = "white";
       this.elementTuto.style.backgroundColor = "rgba(0,0,0,.5)";
       this.elementTuto.style.opacity = this.opacity;
       this.elementTuto.style.textAlign = `center`;
-      this.elementTuto.innerHTML =
-        "<p style='font-size:24px'><b>Pour vous déplacer, cliquer et glisser dans la direction souhaitée.</p>";
+      this.elementTuto.style.fontSize = "24px";
+      this.elementTuto.innerHTML = `<p>Pour vous déplacer, cliquer et glisser dans la direction souhaitée.</br>
+        Suivez les <img style='width:32px; margin-top:8px; display:inline;' src='./Sources/Images/compass.png'> pour vous diriger vers les systèmes.</p>`;
     }
 
     this.elementH1.style.left = `${screenX - this.dimensions.width / 2}px`;
@@ -60,6 +61,12 @@ export class Contact {
             "_blank"
           );
         });
+        linkedinButton.addEventListener("touchstart", function () {
+          window.open(
+            "https://www.linkedin.com/in/ilan-varillon-4498b891/",
+            "_blank"
+          );
+        });
         document.body.appendChild(linkedinButton);
 
         linkedinButton.style.width = `${this.buttonSize}px`;
@@ -86,7 +93,10 @@ export class Contact {
         resumeButton.style.position = "fixed";
         resumeButton.style.zIndex = 100000;
         resumeButton.addEventListener("click", function () {
-          window.open("./Sources/DEV_Ilan_VARILLON_CV_2023.pdf", "_blank");
+          window.open("./Sources/Ilan_VARILLON_CV_2023.pdf", "_blank");
+        });
+        resumeButton.addEventListener("touchstart", function () {
+          window.open("./Sources/Ilan_VARILLON_CV_2023.pdf", "_blank");
         });
         document.body.appendChild(resumeButton);
 
@@ -109,12 +119,12 @@ export class Contact {
     var distance = Math.sqrt(dx * dx + dy * dy);
     var maxDistance = 500;
     this.opacity = Math.max(0, 1 - distance / maxDistance);
-    if (this.opacity === 0) {
+    if (this.opacity <= 0) {
       this.isTutoDisplay = false;
-
+      this.elementTuto.innerHTML = "";
       let linkedinButton = document.getElementById("linkedin");
       let resumeButton = document.getElementById("resume");
-      linkedinButton.style.right = `${this.buttonSize+18}px`;
+      linkedinButton.style.right = `${this.buttonSize + 18}px`;
       linkedinButton.style.left = "auto";
       linkedinButton.style.top = `${0}px`;
       linkedinButton.style.margin = `18px`;
@@ -127,7 +137,6 @@ export class Contact {
       resumeButton.style.margin = `18px`;
       resumeButton.style.opacity = 1;
       resumeButton.style.backgroundColor = "rgba(0,0,0,.5)";
-
     }
   }
 }

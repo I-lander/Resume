@@ -95,10 +95,9 @@ export class Ship {
 }
 
 export class Particles {
-  constructor(x, y, vx, vy) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.velocity = { x: vx, y: vy };
     this.radius = Math.random() * 8;
     this.velocity = { x: Math.random() * 2 - 1, y: Math.random() * 2 - 1 };
   }

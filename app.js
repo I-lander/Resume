@@ -32,7 +32,8 @@ window.addEventListener("resize", function () {
 window.addEventListener("mousedown", function (e) {
   if (
     e.target.tagName.toLowerCase() === "a" ||
-    e.target.tagName.toLowerCase() === "img"
+    e.target.tagName.toLowerCase() === "img"||
+    e.target.tagName.toLowerCase() === "button"
   ) {
     return;
   }
@@ -55,7 +56,8 @@ window.addEventListener("mousemove", function (e) {
 window.addEventListener("touchstart", function (e) {
   if (
     e.target.tagName.toLowerCase() === "a" ||
-    e.target.tagName.toLowerCase() === "img"
+    e.target.tagName.toLowerCase() === "img" ||
+    e.target.tagName.toLowerCase() === "button"
   ) {
     return;
   }

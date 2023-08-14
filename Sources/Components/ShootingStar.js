@@ -5,6 +5,7 @@ class StarParticle {
   constructor(x, y) {
     this.x = x;
     this.y = y;
+    this.velocity = { x: Math.random() * 2 - 1, y: Math.random() * 2 - 1 };
     this.opacity = 1;
     this.color = Math.random() * 360;
     this.size = Math.random() * 3 + 1;
@@ -16,7 +17,7 @@ class StarParticle {
     const screenX = this.x - camera.x;
     const screenY = this.y - camera.y;
 
-    ctx.fillStyle = `hsla(${this.color}, 100%, 80%, ${this.opacity})`;
+    ctx.fillStyle = `hsla(${this.color}, 100%, 90%, ${this.opacity})`;
     ctx.beginPath();
     ctx.arc(screenX, screenY, this.size, 0, Math.PI * 2);
     ctx.fill();
@@ -24,8 +25,8 @@ class StarParticle {
 
   update(ctx) {
     this.draw(ctx);
-    this.x += this.speedX;
-    this.y += this.speedY;
+    this.x += this.velocity.x;
+    this.y += this.velocity.y;
     this.opacity -= 0.03;
   }
 }
