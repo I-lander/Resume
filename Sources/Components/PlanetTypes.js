@@ -121,7 +121,7 @@ export class DelementPlanet extends Planet {
       "Le défi que je me suis imposé pour ce jeu est de le rendre jouable en ligne en crossplatform.<br>" +
       "Très prochainement disponible sur Android et Steam.<br>" +
       "Disponible sur demande.<br>" +
-      "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/DiceyChess/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
+      "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/Delements/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
       "</p>";
   }
 }

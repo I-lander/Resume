@@ -12,10 +12,30 @@ canvas.height = innerHeight;
 
 let lastFrameTimeMs = 0;
 let maxFPS = 90;
-
+let zoomFactor = 1;
 export var mouseX = innerWidth / 2;
 export var mouseY = 0;
 export var mouseDown = false;
+
+window.addEventListener(
+  "wheel",
+  function (event) {
+    console.log("Zoom event triggered!");
+
+    if (event.deltaY < 0) {
+      zoomFactor *= 1.1; // zoom in
+    } else {
+      zoomFactor *= 0.9; // zoom out
+    }
+
+    // Réinitialiser et appliquer le nouveau scale
+    ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+    ctx.scale(zoomFactor, zoomFactor);
+
+    event.preventDefault();
+  },
+  { passive: false }
+);
 
 window.addEventListener("resize", function () {
   const oldWidth = canvas.width;
@@ -32,7 +52,7 @@ window.addEventListener("resize", function () {
 window.addEventListener("mousedown", function (e) {
   if (
     e.target.tagName.toLowerCase() === "a" ||
-    e.target.tagName.toLowerCase() === "img"||
+    e.target.tagName.toLowerCase() === "img" ||
     e.target.tagName.toLowerCase() === "button"
   ) {
     return;
