@@ -118,9 +118,7 @@ export class DelementPlanet extends Planet {
       "<p>Délements est un jeu développé sur Unity." +
       "C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
       "Mon but en me lançant dans ce projet était d'apprendre le C#.<br>" +
-      "Le défi que je me suis imposé pour ce jeu est de le rendre jouable en ligne en crossplatform.<br>" +
-      "Très prochainement disponible sur Android et Steam.<br>" +
-      "Disponible sur demande.<br>" +
+      "Disponible gratuitement sur : <br> <a class='link' href='https://play.google.com/store/apps/details?id=com.donkeysisle.diceychess' target='_blank'><img class='repo-link' src='./Sources/Images/playStore.png'></a>" +
       "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/Delements/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
       "</p>";
   }
