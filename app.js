@@ -17,25 +17,25 @@ export var mouseX = innerWidth / 2;
 export var mouseY = 0;
 export var mouseDown = false;
 
-window.addEventListener(
-  "wheel",
-  function (event) {
-    console.log("Zoom event triggered!");
+// window.addEventListener(
+//   "wheel",
+//   function (event) {
+//     console.log("Zoom event triggered!");
 
-    if (event.deltaY < 0) {
-      zoomFactor *= 1.1; // zoom in
-    } else {
-      zoomFactor *= 0.9; // zoom out
-    }
+//     if (event.deltaY < 0) {
+//       zoomFactor *= 1.1; // zoom in
+//     } else {
+//       zoomFactor *= 0.9; // zoom out
+//     }
 
-    // Réinitialiser et appliquer le nouveau scale
-    ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-    ctx.scale(zoomFactor, zoomFactor);
+//     // Réinitialiser et appliquer le nouveau scale
+//     ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+//     ctx.scale(zoomFactor, zoomFactor);
 
-    event.preventDefault();
-  },
-  { passive: false }
-);
+//     event.preventDefault();
+//   },
+//   { passive: false }
+// );
 
 window.addEventListener("resize", function () {
   const oldWidth = canvas.width;
