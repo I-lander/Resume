@@ -99,10 +99,10 @@ export class Contact {
         resumeButton.style.position = "fixed";
         resumeButton.style.zIndex = 100000;
         resumeButton.addEventListener("click", function () {
-          window.open("./Sources/Ilan_VARILLON_CV_2023.pdf", "_blank");
+          window.open("./Sources/Ilan_VARILLON_CV_2024.pdf", "_blank");
         });
         resumeButton.addEventListener("touchstart", function () {
-          window.open("./Sources/Ilan_VARILLON_CV_2023.pdf", "_blank");
+          window.open("./Sources/Ilan_VARILLON_CV_2024.pdf", "_blank");
         });
         document.body.appendChild(resumeButton);
 
