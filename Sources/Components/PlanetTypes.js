@@ -149,7 +149,6 @@ export class DonkeyReadingsPlanet extends Planet {
       "J'ai eu l'idée de ce service dans le train en voyant mon voisin de devant qui consultait un horoscope.<br>" +
       "Codée en React, l'application permet de poser une question et de recevoir un tirage de trois cartes.<br>" +
       "Le modèle génère alors une lecture construite autour de la question et des cartes choisies aléatoirement.<br><br>" +
-      "Pour l'instant en accès libre, l'application est accessible ici :<br>" +
       "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/donkeysReadings/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
       "</p>";
   }
