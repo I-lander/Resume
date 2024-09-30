@@ -17,4 +17,4 @@
 ## 🙋‍♂️ Auteur
 
 - **Ilan Varillon** 
-  - [LinkedIn](https://www.linkedin.com/in/ilan-varillon-4498b891/)
+  - [LinkedIn](https://www.linkedin.com/in/ilan-v-4498b891/)

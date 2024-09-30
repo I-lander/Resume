@@ -61,18 +61,12 @@ export class Contact {
         linkedinButton.classList.add("linkedinButton");
         linkedinButton.style.position = "fixed";
         linkedinButton.style.zIndex = 10000;
-        linkedinButton.addEventListener("click", function () {
+        linkedinButton.onclick=()=> {
           window.open(
-            "https://www.linkedin.com/in/ilan-varillon-4498b891/",
+            "https://www.linkedin.com/in/ilan-v-4498b891/",
             "_blank"
           );
-        });
-        linkedinButton.addEventListener("touchstart", function () {
-          window.open(
-            "https://www.linkedin.com/in/ilan-varillon-4498b891/",
-            "_blank"
-          );
-        });
+        };
         document.body.appendChild(linkedinButton);
 
         linkedinButton.style.width = `${this.buttonSize}px`;
