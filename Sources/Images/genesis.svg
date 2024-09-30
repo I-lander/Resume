@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="100"
+   height="100"
+   viewBox="-146.5 84.5 100 100"
+   id="svg1"
+   sodipodi:docname="house.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="11.313709"
+     inkscape:cx="26.604893"
+     inkscape:cy="41.409941"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     id="path1"
+     style="fill:#e38d66;fill-opacity:1;stroke-width:10;stroke-dashoffset:88"
+     inkscape:transform-center-y="-10.591828"
+     transform="translate(-134.4776,124.37648)"
+     d="M 74.66877,51.776724 H 1.2864303 L 37.9776,-26.648807 Z"
+     sodipodi:nodetypes="cccc" />
+  <path
+     id="path1-2"
+     style="fill:#3a353d;fill-opacity:1;stroke-width:3.47336;stroke-dashoffset:88"
+     inkscape:transform-center-y="-3.678928"
+     d="m -71.271261,176.1532 h -25.488364 l 12.744182,-27.24005 z"
+     sodipodi:nodetypes="cccc" />
+  <path
+     id="rect4"
+     style="fill:#7b55bc;stroke-width:1.03002;stroke-dashoffset:88"
+     d="m -108.86632,124.16007 h 24.732645 L -79.296167,134.5 h -34.407663 z"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     id="rect4-5"
+     style="fill:#7b55bc;stroke-width:0.721261;stroke-dashoffset:88"
+     d="m -114.72153,136.67528 h 36.443061 l 1.949557,4.16708 h -40.342178 z"
+     sodipodi:nodetypes="ccccc" />
+</svg>

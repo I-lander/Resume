@@ -116,7 +116,6 @@ export class DelementPlanet extends Planet {
     this.text =
       "<h3 style='text-align:center'>Délements</h3>" +
       "<p>Délements est un jeu développé sur Unity." +
-      "C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
       "Mon but en me lançant dans ce projet était d'apprendre le C#.<br>" +
       "Disponible gratuitement sur : <br> <a class='link' href='https://play.google.com/store/apps/details?id=com.donkeysisle.diceychess' target='_blank'><img class='repo-link' src='./Sources/Images/playStore.png'></a>" +
       "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/Delements/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
@@ -165,6 +164,21 @@ export class ResumePlanet extends Planet {
       "L'idée m'est alors venue de combiner mes compétences et mon amour pour la création de jeu.<br>" +
       "Développé entièrement en Javascript vanilla, il m'a permis également de faire un point sur ma montée en compétence et sur ma compréhension de la programmation.<br><br>" +
       "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/Resume' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
+      "</p>";
+  }
+}
+
+export class GenesisPlanet extends Planet {
+  constructor(radius, speed, distance, parent) {
+    super(radius, speed, distance, parent);
+    this.image = document.getElementById("genesis-img");
+    this.id = "genesis";
+    this.text =
+      "<h3>Genesis: Art of Creation</h3>" +
+      "<p>C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
+      "Il s'agit d'un jeu de type god game / toy où le seul but est de prendre plaisir.<br>"+
+      "Destiné aux plateformes Steam, Android et Itchio.<br><br>" +      
+      "Le lien de la page itchio :<br> <a class='link' href='https://donkeys-isle.itch.io/genesis-art-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
       "</p>";
   }
 }

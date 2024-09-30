@@ -14,6 +14,7 @@ import {
   PythonPlanet,
   ReactPlanet,
   ResumePlanet,
+  GenesisPlanet,
   Soft1Planet,
   Soft2Planet,
   Soft3Planet,
@@ -67,6 +68,11 @@ const donkeyReadingsPlanet = new DonkeyReadingsPlanet(
 const resumePlanet = new ResumePlanet(
   50,
   projectsSun.orbitInterval * 12,
+  projectsSun
+);
+const genesisPlanet = new GenesisPlanet(
+  50,
+  projectsSun.orbitInterval * 14,
   projectsSun
 );
 const htmlPlanet = new HtmlPlanet(50, skillsSun.orbitInterval * 4, skillsSun);
@@ -132,6 +138,7 @@ export const worldObjects = [
   donkeyReadingsPlanet,
   bereshitPlanet,
   resumePlanet,
+  genesisPlanet,
   soft1Planet,
   soft2Planet,
   soft3Planet,
