@@ -6,7 +6,7 @@ export class HtmlPlanet extends Planet {
     this.image = document.getElementById("html");
     this.id = "html";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>HTML<b> :</br> ★★★★☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>HTML<b> :</br> ★★★★★</p>";
   }
 }
 export class CssPlanet extends Planet {
@@ -15,7 +15,7 @@ export class CssPlanet extends Planet {
     this.image = document.getElementById("css-img");
     this.id = "css";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>CSS<b> :</br> ★★★☆☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>CSS<b> :</br> ★★★★☆</p>";
   }
 }
 export class JavascriptPlanet extends Planet {
@@ -24,7 +24,7 @@ export class JavascriptPlanet extends Planet {
     this.image = document.getElementById("javascript-img");
     this.id = "javascript";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Javascript<b> :</br> ★★★★☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>Javascript<b> :</br> ★★★★★</p>";
   }
 }
 export class ReactPlanet extends Planet {
@@ -51,7 +51,7 @@ export class TypescriptPlanet extends Planet {
     this.image = document.getElementById("typescript-img");
     this.id = "typescript";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Typescript<b> :</br> ★★★☆☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>Typescript<b> :</br> ★★★★☆</p>";
   }
 }
 export class PythonPlanet extends Planet {
@@ -60,7 +60,7 @@ export class PythonPlanet extends Planet {
     this.image = document.getElementById("python-img");
     this.id = "python";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Python<b> :</br> ★★★★☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>Python<b> :</br> ★★★☆☆</p>";
   }
 }
 export class CsharpPlanet extends Planet {
@@ -69,7 +69,7 @@ export class CsharpPlanet extends Planet {
     this.image = document.getElementById("c_sharp-img");
     this.id = "c_sharp";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>C#<b> :</br> ★★★☆☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>C#<b> :</br> ★★☆☆☆</p>";
   }
 }
 export class ChatGPTPlanet extends Planet {
