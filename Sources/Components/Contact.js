@@ -60,13 +60,12 @@ export class Contact {
         linkedinButton.id = "linkedin";
         linkedinButton.classList.add("linkedinButton");
         linkedinButton.style.position = "fixed";
-        linkedinButton.style.zIndex = 10000;
-        linkedinButton.onclick=()=> {
-          window.open(
-            "https://www.linkedin.com/in/ilan-v-4498b891/",
-            "_blank"
-          );
-        };
+        linkedinButton.style.zIndex = 1000000;
+        linkedinButton.addEventListener("click", function () {
+          window.open("https://www.linkedin.com/in/ilan-v-4498b891/", "_blank");
+        });        linkedinButton.addEventListener("touchstart", function () {
+          window.open("https://www.linkedin.com/in/ilan-v-4498b891/", "_blank");
+        });
         document.body.appendChild(linkedinButton);
 
         linkedinButton.style.width = `${this.buttonSize}px`;
@@ -93,10 +92,10 @@ export class Contact {
         resumeButton.style.position = "fixed";
         resumeButton.style.zIndex = 100000;
         resumeButton.addEventListener("click", function () {
-          window.open("./Sources/Ilan_VARILLON_CV_2024.pdf", "_blank");
+          window.open("./Sources/Ilan_VARILLON_CV_2025.pdf", "_blank");
         });
         resumeButton.addEventListener("touchstart", function () {
-          window.open("./Sources/Ilan_VARILLON_CV_2024.pdf", "_blank");
+          window.open("./Sources/Ilan_VARILLON_CV_2025.pdf", "_blank");
         });
         document.body.appendChild(resumeButton);
 

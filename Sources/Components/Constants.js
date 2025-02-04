@@ -26,7 +26,7 @@ import {
   Soft9Planet,
   SqlPlanet,
   TypescriptPlanet,
-  UnityPlanet,
+  DockerPlanet,
 } from "./PlanetTypes.js";
 import { Ship } from "./Ship.js";
 import { ShootingStar } from "./ShootingStar.js";
@@ -110,7 +110,7 @@ const chatGPTPlanet = new ChatGPTPlanet(
 );
 const gitPlanet = new GitPlanet(50, skillsSun.orbitInterval * 13, skillsSun);
 const sqlPlanet = new SqlPlanet(50, skillsSun.orbitInterval * 14, skillsSun);
-const unityPlanet = new UnityPlanet(
+const dockerPlanet = new DockerPlanet(
   50,
   skillsSun.orbitInterval * 15,
   skillsSun
@@ -132,7 +132,7 @@ export const worldObjects = [
   chatGPTPlanet,
   gitPlanet,
   sqlPlanet,
-  unityPlanet,
+  dockerPlanet,
   contact,
   delementPlanet,
   donkeyReadingsPlanet,

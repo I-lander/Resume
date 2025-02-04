@@ -99,13 +99,13 @@ export class SqlPlanet extends Planet {
       "<p style='text-align:center'>Mon niveau sur</br> <b>SQL<b> :</br> ★★★★★</p>";
   }
 }
-export class UnityPlanet extends Planet {
+export class DockerPlanet extends Planet {
   constructor(radius, speed, distance, parent) {
     super(radius, speed, distance, parent);
-    this.image = document.getElementById("unity-img");
-    this.id = "unity";
+    this.image = document.getElementById("docker-img");
+    this.id = "docker";
     this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Unity<b> :</br> ★★★☆☆</p>";
+      "<p style='text-align:center'>Mon niveau sur</br> <b>Docker<b> :</br> ★★★★☆</p>";
   }
 }
 export class DelementPlanet extends Planet {
@@ -176,9 +176,9 @@ export class GenesisPlanet extends Planet {
     this.text =
       "<h3>Genesis: Art of Creation</h3>" +
       "<p>C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
-      "Il s'agit d'un jeu de type god game / toy où le seul but est de prendre plaisir.<br>"+
-      "Destiné aux plateformes Steam, Android et Itchio.<br><br>" +      
-      "Le lien de la page itchio :<br> <a class='link' href='https://donkeys-isle.itch.io/genesis-art-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
+      "Il s'agit d'un jeu de type god game / toy où le seul but est de prendre plaisir.<br>" +
+      "Destiné aux plateformes Steam, Android et Itchio.<br><br>" +
+      // "Le lien de la page itchio :<br> <a class='link' href='https://donkeys-isle.itch.io/genesis-art-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
       "</p>";
   }
 }
