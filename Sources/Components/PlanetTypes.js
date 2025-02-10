@@ -178,7 +178,7 @@ export class GenesisPlanet extends Planet {
       "<p>C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
       "Il s'agit d'un jeu de type god game / toy où le seul but est de prendre plaisir.<br>" +
       "Destiné aux plateformes Steam, Android et Itchio.<br><br>" +
-      // "Le lien de la page itchio :<br> <a class='link' href='https://donkeys-isle.itch.io/genesis-art-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
+      "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/genesis-age-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
       "</p>";
   }
 }
