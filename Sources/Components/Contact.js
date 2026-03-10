@@ -8,14 +8,39 @@ export class Contact {
     this.elementTuto = document.getElementById("contactTuto");
     this.elementH1 = document.getElementById("contactH1");
     this.elementText = document.getElementById("contactText");
-    this.dimensions = { width: 500, height: 500 };
     this.isTutoDisplay = true;
-    this.buttonSize = 50;
+    this.buttonSize = innerWidth < 500 ? 40 : 50;
+    this.typewriterDone = false;
+    this.typewriterIndex = 0;
+    this.typewriterText = "Pour vous déplacer, cliquer et glisser dans la direction souhaitée.";
+    this.lastTypeTime = 0;
+  }
+
+  _typewriter() {
+    if (this.typewriterDone) return;
+    const now = Date.now();
+    if (now - this.lastTypeTime < 35) return;
+    this.lastTypeTime = now;
+
+    if (this.typewriterIndex <= this.typewriterText.length) {
+      const textEl = this.elementTuto.querySelector(".typewriter-text");
+      if (textEl) {
+        textEl.textContent = this.typewriterText.substring(0, this.typewriterIndex);
+      }
+      this.typewriterIndex++;
+    } else {
+      this.typewriterDone = true;
+    }
+  }
+
+  _getWidth() {
+    return Math.min(500, innerWidth - 40);
   }
 
   draw() {
     var screenX = this.x - camera.x;
     var screenY = this.y - camera.y;
+    const w = this._getWidth();
 
     if (this.isTutoDisplay) {
       this.elementTuto.style.left = `${0}px`;
@@ -23,35 +48,37 @@ export class Contact {
       this.elementTuto.style.width = `${innerWidth}px`;
       this.elementTuto.style.height = `auto`;
       this.elementTuto.style.color = "white";
-      this.elementTuto.style.backgroundColor = "rgba(0,0,0,.5)";
       this.elementTuto.style.opacity = this.opacity;
       this.elementTuto.style.textAlign = `center`;
-      this.elementTuto.style.fontSize = "24px";
+      this.elementTuto.style.fontSize = innerWidth < 500 ? "16px" : "24px";
       if (this.elementTuto.innerHTML == "") {
-        this.elementTuto.innerHTML = `<p>Pour vous déplacer, cliquer et glisser dans la direction souhaitée.</br>
-        Suivez les <img style='width:32px; margin-top:8px; display:inline;' src='./Sources/Images/compass.png'> pour vous diriger vers les systèmes.</p>`;
+        const compassSize = innerWidth < 500 ? 24 : 32;
+        this.elementTuto.innerHTML = `<p class="tuto-banner"><span class="typewriter-text"></span><span class="typewriter-cursor">|</span></br>
+        Suivez les <img style='width:${compassSize}px; margin-top:8px; display:inline; vertical-align:middle;' src='./Sources/Images/compass.png'> pour vous diriger vers les systèmes.</p>`;
       }
+      this._typewriter();
     }
 
-    this.elementH1.style.left = `${screenX - this.dimensions.width / 2}px`;
+    this.elementH1.style.left = `${screenX - w / 2}px`;
     this.elementH1.style.top = `${screenY - 360}px`;
-    this.elementH1.style.width = `${this.dimensions.width}px`;
-    this.elementH1.style.height = `${this.dimensions.height}px`;
+    this.elementH1.style.width = `${w}px`;
+    this.elementH1.style.height = `${w}px`;
     this.elementH1.style.color = "white";
     this.elementH1.style.opacity = this.opacity;
     if (this.elementH1.innerHTML == "") {
-      this.elementH1.innerHTML = "<h1>Ilan Varillon</h1>";
+      this.elementH1.innerHTML = '<h1 class="hero-title">Ilan Varillon</h1>';
     }
 
-    this.elementText.style.left = `${screenX - this.dimensions.width / 2}px`;
+    this.elementText.style.left = `${screenX - w / 2}px`;
     this.elementText.style.top = `${screenY - 25}px`;
-    this.elementText.style.width = `${this.dimensions.width}px`;
-    this.elementText.style.height = `${this.dimensions.height}px`;
+    this.elementText.style.width = `${w}px`;
+    this.elementText.style.height = `${w}px`;
     this.elementText.style.color = "white";
     this.elementText.style.opacity = this.opacity;
     if (this.elementText.innerHTML == "") {
       this.elementText.innerHTML =
-        "<p>06 10 51 33 58</p>" + "<p> ilan.varillon@gmail.com</p>";
+        '<p class="contact-info">06 10 51 33 58</p>' +
+        '<p class="contact-info">ilan.varillon@gmail.com</p>';
     }
     if (this.opacity > 0) {
       let linkedinButton = document.getElementById("linkedin");
@@ -63,7 +90,8 @@ export class Contact {
         linkedinButton.style.zIndex = 1000000;
         linkedinButton.addEventListener("click", function () {
           window.open("https://www.linkedin.com/in/ilan-v-4498b891/", "_blank");
-        });        linkedinButton.addEventListener("touchstart", function () {
+        });
+        linkedinButton.addEventListener("touchstart", function () {
           window.open("https://www.linkedin.com/in/ilan-v-4498b891/", "_blank");
         });
         document.body.appendChild(linkedinButton);

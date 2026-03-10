@@ -12,30 +12,9 @@ canvas.height = innerHeight;
 
 let lastFrameTimeMs = 0;
 let maxFPS = 90;
-let zoomFactor = 1;
 export var mouseX = innerWidth / 2;
 export var mouseY = 0;
 export var mouseDown = false;
-
-// window.addEventListener(
-//   "wheel",
-//   function (event) {
-//     console.log("Zoom event triggered!");
-
-//     if (event.deltaY < 0) {
-//       zoomFactor *= 1.1; // zoom in
-//     } else {
-//       zoomFactor *= 0.9; // zoom out
-//     }
-
-//     // Réinitialiser et appliquer le nouveau scale
-//     ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-//     ctx.scale(zoomFactor, zoomFactor);
-
-//     event.preventDefault();
-//   },
-//   { passive: false }
-// );
 
 window.addEventListener("resize", function () {
   const oldWidth = canvas.width;
@@ -113,6 +92,7 @@ export const camera = {
   width: canvas.width,
   height: canvas.height,
 };
+
 const limit = {
   id: "limit",
   x: innerWidth / 2,
@@ -121,14 +101,20 @@ const limit = {
 };
 const maxStars = limit.radius / 5;
 
+const layers = [0.3, 0.6, 1.0];
 for (var i = 0; i < maxStars; i++) {
   const r = Math.sqrt(Math.random()) * limit.radius;
   const theta = Math.random() * 2 * Math.PI;
 
   const starX = limit.x + r * Math.cos(theta);
   const starY = limit.y + r * Math.sin(theta);
-  starsArray.push(new Stars(starX, starY));
+  const layer = layers[Math.floor(Math.random() * layers.length)];
+  starsArray.push(new Stars(starX, starY, layer));
 }
+
+const lerpFactor = 0.15;
+let cameraVelX = 0;
+let cameraVelY = 0;
 
 window.addEventListener("load", function () {
   animate();
@@ -145,8 +131,7 @@ const animate = () => {
   lastFrameTimeMs = timestamp;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  /////////////////////////////////////////////
-  drawWorld();
+  let isMoving = false;
 
   if (mouseDown) {
     var speed = 8;
@@ -154,28 +139,55 @@ const animate = () => {
     var dy = mouseY - innerHeight / 2;
     var distance = Math.sqrt(dx * dx + dy * dy);
 
-    var futurPosX = camera.x + (dx / distance) * speed;
-    var futurPosY = camera.y + (dy / distance) * speed;
+    var moveX = (dx / distance) * speed;
+    var moveY = (dy / distance) * speed;
+
+    cameraVelX += (moveX - cameraVelX) * lerpFactor;
+    cameraVelY += (moveY - cameraVelY) * lerpFactor;
+
+    var futurPosX = camera.x + cameraVelX;
+    var futurPosY = camera.y + cameraVelY;
     var distanceFromCenter = Math.sqrt(
       futurPosX * futurPosX + futurPosY * futurPosY
     );
+
+    if (distanceFromCenter <= limit.radius) {
+      camera.x = futurPosX;
+      camera.y = futurPosY;
+      isMoving = true;
+    }
+  } else {
+    cameraVelX *= 0.9;
+    cameraVelY *= 0.9;
+    if (Math.abs(cameraVelX) > 0.1 || Math.abs(cameraVelY) > 0.1) {
+      var futurPosX = camera.x + cameraVelX;
+      var futurPosY = camera.y + cameraVelY;
+      var distanceFromCenter = Math.sqrt(
+        futurPosX * futurPosX + futurPosY * futurPosY
+      );
+      if (distanceFromCenter <= limit.radius) {
+        camera.x = futurPosX;
+        camera.y = futurPosY;
+      }
+    }
   }
+
   var screenX = limit.x - camera.x;
   var screenY = limit.y - camera.y;
   ctx.save();
+  const boundaryPulse = Math.sin(timestamp * 0.001) * 0.15 + 0.5;
   ctx.beginPath();
   ctx.arc(screenX, screenY, limit.radius, 0, 2 * Math.PI);
   ctx.setLineDash([10, 10]);
-  ctx.lineWidth = 5;
-  ctx.strokeStyle = "hsla(0, 64%, 60%, 1)";
+  ctx.lineDashOffset = -timestamp * 0.02;
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = `hsla(0, 64%, 60%, ${boundaryPulse})`;
+  ctx.shadowColor = "hsla(0, 64%, 60%, 0.3)";
+  ctx.shadowBlur = 10;
   ctx.stroke();
   ctx.restore();
-  if (distanceFromCenter <= limit.radius) {
-    camera.x = futurPosX;
-    camera.y = futurPosY;
-  }
 
-  /////////////////////////////////////////////
+  drawWorld(isMoving, camera.x, camera.y);
 
   requestAnimationFrame(animate);
   return;

@@ -1,116 +1,33 @@
 import { Planet } from "./Planet.js";
 
-export class HtmlPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("html");
-    this.id = "html";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>HTML<b> :</br> ★★★★★</p>";
+const SKILL_CONFIG = {
+  html:       { img: "html-img",      text: "HTML",           stars: "★★★★★" },
+  css:        { img: "css-img",       text: "CSS",            stars: "★★★★☆" },
+  javascript: { img: "javascript-img",text: "Javascript",     stars: "★★★★★" },
+  react:      { img: "react-img",     text: "React",          stars: "★★★★☆" },
+  angular:    { img: "angular-img",   text: "Angular",        stars: "★★★☆☆" },
+  typescript: { img: "typescript-img",text: "Typescript",      stars: "★★★★☆" },
+  python:     { img: "python-img",    text: "Python",         stars: "★★★☆☆" },
+  c_sharp:    { img: "c_sharp-img",   text: "C#",             stars: "★★☆☆☆" },
+  chatGPT:    { img: "chatGPT-img",   text: "ChatGPT",        stars: "★★★★★" },
+  git:        { img: "git-img",       text: "Git / Github",   stars: "★★★☆☆" },
+  sql:        { img: "sql-img",       text: "SQL",            stars: "★★★★★" },
+  docker:     { img: "docker-img",    text: "Docker",         stars: "★★★★☆" },
+};
+
+export class SkillPlanet extends Planet {
+  constructor(radius, distance, parent, skillKey) {
+    super(radius, distance, parent);
+    const config = SKILL_CONFIG[skillKey];
+    this.image = document.getElementById(config.img);
+    this.id = skillKey;
+    this.text = `<p style='text-align:center'>Mon niveau sur</br> <b>${config.text}</b> :</br> ${config.stars}</p>`;
   }
 }
-export class CssPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("css-img");
-    this.id = "css";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>CSS<b> :</br> ★★★★☆</p>";
-  }
-}
-export class JavascriptPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("javascript-img");
-    this.id = "javascript";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Javascript<b> :</br> ★★★★★</p>";
-  }
-}
-export class ReactPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("react-img");
-    this.id = "react";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>React<b> :</br> ★★★★☆</p>";
-  }
-}
-export class AngularPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("angular-img");
-    this.id = "angular";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Angular<b> :</br> ★★★☆☆</p>";
-  }
-}
-export class TypescriptPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("typescript-img");
-    this.id = "typescript";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Typescript<b> :</br> ★★★★☆</p>";
-  }
-}
-export class PythonPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("python-img");
-    this.id = "python";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Python<b> :</br> ★★★☆☆</p>";
-  }
-}
-export class CsharpPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("c_sharp-img");
-    this.id = "c_sharp";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>C#<b> :</br> ★★☆☆☆</p>";
-  }
-}
-export class ChatGPTPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("chatGPT-img");
-    this.id = "chatGPT";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>ChatGPT<b> :</br> ★★★★★</p>";
-  }
-}
-export class GitPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("git-img");
-    this.id = "git";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Git<b> / Github<b> :</br> ★★★☆☆</p>";
-  }
-}
-export class SqlPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("sql-img");
-    this.id = "sql";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>SQL<b> :</br> ★★★★★</p>";
-  }
-}
-export class DockerPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.image = document.getElementById("docker-img");
-    this.id = "docker";
-    this.text =
-      "<p style='text-align:center'>Mon niveau sur</br> <b>Docker<b> :</br> ★★★★☆</p>";
-  }
-}
+
 export class DelementPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
     this.image = document.getElementById("delement-img");
     this.id = "delement";
     this.text =
@@ -122,9 +39,10 @@ export class DelementPlanet extends Planet {
       "</p>";
   }
 }
+
 export class BereshitPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
     this.image = document.getElementById("bereshit-img");
     this.id = "bereshit";
     this.text =
@@ -137,9 +55,10 @@ export class BereshitPlanet extends Planet {
       "</p>";
   }
 }
+
 export class DonkeyReadingsPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
     this.image = document.getElementById("donkey-img");
     this.id = "donkey";
     this.text =
@@ -152,9 +71,10 @@ export class DonkeyReadingsPlanet extends Planet {
       "</p>";
   }
 }
+
 export class ResumePlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
     this.image = document.getElementById("resumePlanet-img");
     this.id = "resumePlanet";
     this.text =
@@ -169,8 +89,8 @@ export class ResumePlanet extends Planet {
 }
 
 export class GenesisPlanet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
     this.image = document.getElementById("genesis-img");
     this.id = "genesis";
     this.text =
@@ -182,68 +102,23 @@ export class GenesisPlanet extends Planet {
       "</p>";
   }
 }
-export class Soft1Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft1";
-    this.text = "<p style='text-align:center'>Autodidacte</p>";
-  }
-}
-export class Soft2Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft2";
-    this.text = "<p style='text-align:center'>Hyper enthousiaste</p>";
-  }
-}
-export class Soft3Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft3";
-    this.text = "<p style='text-align:center'>Rigoureux</p>";
-  }
-}
-export class Soft4Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft4";
-    this.text = "<p style='text-align:center'>Créatif</p>";
-  }
-}
-export class Soft5Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft5";
-    this.text = "<p style='text-align:center'>Assoiffé de nouveaux défis</p>";
-  }
-}
-export class Soft6Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft6";
-    this.text = "<p style='text-align:center'>Ouvert à la critique</p>";
-  }
-}
-export class Soft7Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft7";
-    this.text = "<p style='text-align:center'>Autonome</p>";
-  }
-}
 
-export class Soft8Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft7";
-    this.text = "<p style='text-align:center'>Drôle</p>";
-  }
-}
+const SOFT_SKILLS = [
+  "Autodidacte",
+  "Hyper enthousiaste",
+  "Rigoureux",
+  "Créatif",
+  "Assoiffé de nouveaux défis",
+  "Ouvert à la critique",
+  "Autonome",
+  "Drôle",
+  "Toujours souriant",
+];
 
-export class Soft9Planet extends Planet {
-  constructor(radius, speed, distance, parent) {
-    super(radius, speed, distance, parent);
-    this.id = "soft7";
-    this.text = "<p style='text-align:center'>Toujours souriant</p>";
+export class SoftPlanet extends Planet {
+  constructor(radius, distance, parent, index) {
+    super(radius, distance, parent);
+    this.id = `soft${index + 1}`;
+    this.text = `<p style='text-align:center'>${SOFT_SKILLS[index]}</p>`;
   }
 }
