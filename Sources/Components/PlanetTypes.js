@@ -95,10 +95,25 @@ export class GenesisPlanet extends Planet {
     this.id = "genesis";
     this.text =
       "<h3>Genesis: Art of Creation</h3>" +
-      "<p>C'est à ce jour ma dernière création, il témoigne donc de toute mon expérience acquise.<br>" +
+      "<p>Un jeu de type god game / toy qui témoigne de toute mon expérience acquise.<br>" +
       "Il s'agit d'un jeu de type god game / toy où le seul but est de prendre plaisir.<br>" +
       "Destiné aux plateformes Steam, Android et Itchio.<br><br>" +
       "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/genesis-age-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
+      "</p>";
+  }
+}
+
+export class EpitaphPlanet extends Planet {
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
+    this.image = document.getElementById("epitaph-img");
+    this.id = "epitaph";
+    this.text =
+      "<h3>Epitaph</h3>" +
+      "<p>Mon dernier jeu publié ! Un survival / bullet-heaven mobile où le joueur incarne une créature surnaturelle qui affronte des vagues d'humains pour collecter 333 âmes.<br>" +
+      "Développé en Typescript avec Phaser 3, React / Ionic, et packagé pour Android via Capacitor.<br><br>" +
+      "Le lien du Play Store :<br> <a class='link' href='https://play.google.com/store/apps/details?id=com.donkeysisle.epitaph&hl=fr' target='_blank'><img class='repo-link' src='./Sources/Images/playStore.png'></a>" +
+      "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/epitaph' target='_blank'><img class='repo-link' src='./Sources/Images/epitaph.png'></a>" +
       "</p>";
   }
 }

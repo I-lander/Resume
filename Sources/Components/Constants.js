@@ -7,6 +7,7 @@ import {
   DonkeyReadingsPlanet,
   ResumePlanet,
   GenesisPlanet,
+  EpitaphPlanet,
   SoftPlanet,
 } from "./PlanetTypes.js";
 import { Ship } from "./Ship.js";
@@ -44,6 +45,7 @@ const bereshitPlanet = new BereshitPlanet(50, projectsSun.orbitInterval * 6, pro
 const donkeyReadingsPlanet = new DonkeyReadingsPlanet(50, projectsSun.orbitInterval * 8, projectsSun);
 const resumePlanet = new ResumePlanet(50, projectsSun.orbitInterval * 12, projectsSun);
 const genesisPlanet = new GenesisPlanet(50, projectsSun.orbitInterval * 14, projectsSun);
+const epitaphPlanet = new EpitaphPlanet(50, projectsSun.orbitInterval * 16, projectsSun);
 
 const softPlanets = Array.from({ length: 9 }, (_, i) =>
   new SoftPlanet(60, otherSun.orbitInterval * (2 + i), otherSun, i)
@@ -61,6 +63,7 @@ export const worldObjects = [
   bereshitPlanet,
   resumePlanet,
   genesisPlanet,
+  epitaphPlanet,
   ...softPlanets,
 ];
 
