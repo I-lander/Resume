@@ -33,7 +33,7 @@ projectsSun.hue = 30;
 
 const SKILL_KEYS = [
   "html", "css", "javascript", "react", "angular",
-  "typescript", "python", "c_sharp", "chatGPT", "git", "sql", "docker",
+  "typescript", "python", "c_sharp", "claude", "git", "sql", "docker",
 ];
 
 const skillPlanets = SKILL_KEYS.map((key, i) =>
