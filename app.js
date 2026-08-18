@@ -1,5 +1,6 @@
 import {
   drawWorld,
+  getWorldRadius,
   starsArray,
   worldObjects,
 } from "./Sources/Components/Constants.js";
@@ -97,8 +98,9 @@ const limit = {
   id: "limit",
   x: innerWidth / 2,
   y: innerHeight / 2,
-  radius: 3000,
+  radius: 0,
 };
+limit.radius = getWorldRadius(limit.x, limit.y);
 const maxStars = limit.radius / 5;
 
 const layers = [0.3, 0.6, 1.0];

@@ -70,6 +70,28 @@ export const worldObjects = [
   ...softPlanets,
 ];
 
+const ORBIT_MARGIN = 100;
+
+export function getWorldRadius(centerX, centerY) {
+  let maxReach = 0;
+
+  for (const object of worldObjects) {
+    if (!object.parent || object.distance === undefined) continue;
+
+    const dx = object.parent.x - centerX;
+    const dy = object.parent.y - centerY;
+    const reach = Math.hypot(dx, dy) + object.distance + object.radius;
+
+    if (reach > maxReach) {
+      maxReach = reach;
+    }
+  }
+
+  return Math.ceil(maxReach + ORBIT_MARGIN);
+}
+
+const worldRadius = getWorldRadius(innerWidth / 2, innerHeight / 2);
+
 export const starsArray = [];
 
 const bloomFlash = new BloomFlash();
@@ -86,7 +108,7 @@ const nebulae = [
   new Nebula(800, -500, 300, 200),
 ];
 
-const cosmicDustParticles = Array.from({ length: 150 }, () => new CosmicDust(3000));
+const cosmicDustParticles = Array.from({ length: 150 }, () => new CosmicDust(worldRadius));
 
 const shootingStar = new ShootingStar(canvas.width);
 let nextShootingStarTime = Date.now() + getRandomDelay();
