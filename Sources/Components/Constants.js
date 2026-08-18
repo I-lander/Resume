@@ -4,10 +4,11 @@ import {
   SkillPlanet,
   BereshitPlanet,
   DelementPlanet,
-  DonkeyReadingsPlanet,
   ResumePlanet,
   GenesisPlanet,
   EpitaphPlanet,
+  JuicePlanet,
+  CliffWhisperPlanet,
   SoftPlanet,
 } from "./PlanetTypes.js";
 import { Ship } from "./Ship.js";
@@ -42,10 +43,11 @@ const skillPlanets = SKILL_KEYS.map((key, i) =>
 
 const delementPlanet = new DelementPlanet(50, projectsSun.orbitInterval * 10, projectsSun);
 const bereshitPlanet = new BereshitPlanet(50, projectsSun.orbitInterval * 6, projectsSun);
-const donkeyReadingsPlanet = new DonkeyReadingsPlanet(50, projectsSun.orbitInterval * 8, projectsSun);
-const resumePlanet = new ResumePlanet(50, projectsSun.orbitInterval * 12, projectsSun);
-const genesisPlanet = new GenesisPlanet(50, projectsSun.orbitInterval * 14, projectsSun);
-const epitaphPlanet = new EpitaphPlanet(50, projectsSun.orbitInterval * 16, projectsSun);
+const resumePlanet = new ResumePlanet(50, projectsSun.orbitInterval * 8, projectsSun);
+const genesisPlanet = new GenesisPlanet(50, projectsSun.orbitInterval * 12, projectsSun);
+const epitaphPlanet = new EpitaphPlanet(50, projectsSun.orbitInterval * 14, projectsSun);
+const juicePlanet = new JuicePlanet(50, projectsSun.orbitInterval * 16, projectsSun);
+const cliffWhisperPlanet = new CliffWhisperPlanet(50, projectsSun.orbitInterval * 18, projectsSun);
 
 const softPlanets = Array.from({ length: 9 }, (_, i) =>
   new SoftPlanet(60, otherSun.orbitInterval * (2 + i), otherSun, i)
@@ -59,11 +61,12 @@ export const worldObjects = [
   ...skillPlanets,
   contact,
   delementPlanet,
-  donkeyReadingsPlanet,
   bereshitPlanet,
   resumePlanet,
   genesisPlanet,
   epitaphPlanet,
+  juicePlanet,
+  cliffWhisperPlanet,
   ...softPlanets,
 ];
 

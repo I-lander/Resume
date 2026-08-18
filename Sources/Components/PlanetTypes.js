@@ -6,8 +6,8 @@ const SKILL_CONFIG = {
   javascript: { img: "javascript-img",text: "Javascript",     stars: "★★★★★" },
   react:      { img: "react-img",     text: "React",          stars: "★★★★☆" },
   angular:    { img: "angular-img",   text: "Angular",        stars: "★★★☆☆" },
-  typescript: { img: "typescript-img",text: "Typescript",      stars: "★★★★☆" },
-  python:     { img: "python-img",    text: "Python",         stars: "★★★☆☆" },
+  typescript: { img: "typescript-img",text: "Typescript",      stars: "★★★★★" },
+  python:     { img: "python-img",    text: "Python",         stars: "★★★★☆" },
   c_sharp:    { img: "c_sharp-img",   text: "C#",             stars: "★★★★☆" },
   claude:     { img: "claude-img",    text: "Claude",        stars: "★★★★★" },
   git:        { img: "git-img",       text: "Git / Github",   stars: "★★★☆☆" },
@@ -56,21 +56,7 @@ export class BereshitPlanet extends Planet {
   }
 }
 
-export class DonkeyReadingsPlanet extends Planet {
-  constructor(radius, distance, parent) {
-    super(radius, distance, parent);
-    this.image = document.getElementById("donkey-img");
-    this.id = "donkey";
-    this.text =
-      "<h3>Les lectures de l'âne</h3>" +
-      "<p>Depuis que Chat GPT a été mis en ligne, je l'utilise au quotidien.<br>" +
-      "J'ai eu l'idée de ce service dans le train en voyant mon voisin de devant qui consultait un horoscope.<br>" +
-      "Codée en React, l'application permet de poser une question et de recevoir un tirage de trois cartes.<br>" +
-      "Le modèle génère alors une lecture construite autour de la question et des cartes choisies aléatoirement.<br><br>" +
-      "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/donkeysReadings/' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
-      "</p>";
-  }
-}
+
 
 export class ResumePlanet extends Planet {
   constructor(radius, distance, parent) {
@@ -94,10 +80,10 @@ export class GenesisPlanet extends Planet {
     this.image = document.getElementById("genesis-img");
     this.id = "genesis";
     this.text =
-      "<h3>Genesis: Art of Creation</h3>" +
-      "<p>Un jeu de type god game / toy qui témoigne de toute mon expérience acquise.<br>" +
-      "Il s'agit d'un jeu de type god game / toy où le seul but est de prendre plaisir.<br>" +
-      "Destiné aux plateformes Steam, Android et Itchio.<br><br>" +
+      "<h3>Genesis: Age of Creation</h3>" +
+      "<p>Un jeu de simulation dans lequel on endosse le rôle d'une entité créatrice. On pioche des cartes pour débloquer des biomes, des ressources et des bâtiments, ou pour déclencher des événements qui laissent leur marque sur le monde.<br>" +
+      "Aucun combat ici : tout l'enjeu est de faire grandir sa création de façon équilibrée en encaissant les catastrophes qui s'abattent sur une carte toujours plus vaste.<br>" +
+      "Jouable gratuitement dans le navigateur.<br><br>" +
       "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/genesis-age-of-creation' target='_blank'><img class='repo-link' src='./Sources/Images/genesis.svg'></a>" +
       "</p>";
   }
@@ -110,10 +96,40 @@ export class EpitaphPlanet extends Planet {
     this.id = "epitaph";
     this.text =
       "<h3>Epitaph</h3>" +
-      "<p>Mon dernier jeu publié ! Un survival / bullet-heaven mobile où le joueur incarne une créature surnaturelle qui affronte des vagues d'humains pour collecter 333 âmes.<br>" +
-      "Développé en Typescript avec Phaser 3, React / Ionic, et packagé pour Android via Capacitor.<br><br>" +
+      "<p>Un survival / bullet-heaven mobile dans lequel on incarne une créature surnaturelle lâchée au milieu de vagues d'humains. L'objectif : moissonner 333 âmes avant de se faire submerger.<br>" +
+      "Développé en Typescript avec Phaser 3, puis packagé pour Android via Capacitor.<br><br>" +
       "Le lien du Play Store :<br> <a class='link' href='https://play.google.com/store/apps/details?id=com.donkeysisle.epitaph&hl=fr' target='_blank'><img class='repo-link' src='./Sources/Images/playStore.png'></a>" +
       "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/epitaph' target='_blank'><img class='repo-link' src='./Sources/Images/epitaph.png'></a>" +
+      "</p>";
+  }
+}
+
+export class JuicePlanet extends Planet {
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
+    this.image = document.getElementById("juice-img");
+    this.id = "juice";
+    this.text =
+      "<h3>Juice Juicy Juice</h3>" +
+      "<p>Un idle / clicker en pixel art dont le but est de casser le jeu : plus vous générez de chaos à l'écran, plus le compteur de FPS simulé s'effondre, et plus vous gagnez.<br>" +
+      "Développé en Typescript avec Phaser 3, packagé pour Android via Capacitor et pour desktop via Electron.<br><br>" +
+      "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/juice-juicy-juice' target='_blank'><img class='repo-link' src='./Sources/Images/juice.png'></a>" +
+      "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/JuiceJuicyJuice' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
+      "</p>";
+  }
+}
+
+export class CliffWhisperPlanet extends Planet {
+  constructor(radius, distance, parent) {
+    super(radius, distance, parent);
+    this.image = document.getElementById("cliffwhisper-img");
+    this.id = "cliffwhisper";
+    this.text =
+      "<h3>The Cliff Whisper</h3>" +
+      "<p>Un idle / roguelike où le joueur incarne un dieu ancien corrompu : ici le compteur central doit descendre, pas monter. Il faut réduire la population humaine à zéro en luttant contre une natalité qui s'accélère.<br>" +
+      "Développé en Typescript avec Phaser 3, packagé pour Android via Capacitor et pour desktop via Electron.<br><br>" +
+      "Le lien de la page itchio :<br> <a class='link' href='https://donkey-isle.itch.io/the-cliff-whisper' target='_blank'><img class='repo-link' src='./Sources/Images/cliffwhisper.png'></a>" +
+      "Le lien du repo Github :<br> <a class='link' href='https://github.com/I-lander/TheCliffWhisper' target='_blank'><img class='repo-link' src='./Sources/Images/GitHub-white.png'></a>" +
       "</p>";
   }
 }
