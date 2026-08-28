@@ -19,6 +19,13 @@
 
       body {
         background: #525659; /* fond de visionneuse, ecran uniquement */
+        font-family:
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
       }
 
       a {
@@ -37,6 +44,9 @@
         margin: 0 auto;
         overflow: hidden;
         background: #ffffff;
+        color: #39434c;
+        display: grid;
+        grid-template-columns: 272px 1fr;
         box-shadow:
           0 0 0 1px rgba(0, 0, 0, 0.08),
           0 8px 30px rgba(0, 0, 0, 0.25);
@@ -56,1218 +66,662 @@
           page-break-after: avoid;
         }
       }
-    </style>
-  </head>
-  <body>
-  <section
-    class="page"
-    id="p1"
-    data-screen-label="CV"
-    style="
-      display: grid;
-      grid-template-columns: 272px 1fr;
-      font-family:
-        -apple-system,
-        &quot;Segoe UI&quot;,
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      color: #39434c;
-      background: #ffffff;
-      overflow: hidden;
-    "
-  >
-    <aside
-      style="
+
+      /* ---------- Sidebar ---------- */
+      .sidebar {
         background: #151515;
         color: #e8e9ec;
-        padding: 26px 22px;
+        padding: 22px 22px 16px;
         display: flex;
         flex-direction: column;
-        gap: 16px;
-      "
-    >
-      <div>
-        <div
-          style="
-            font-size: 32px;
-            font-weight: 800;
-            line-height: 1.35;
-            color: #ffffff;
-            letter-spacing: -0.02em;
-          "
-        >
-          Ilan<br />VARILLON
-        </div>
-        <div
-          style="
-            margin-top: 8px;
-            display: inline-block;
-            background: #046aef;
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 3px 10px;
-            border-radius: 9999px;
-          "
-        >
-          Tech Lead · Manager
-        </div>
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-          font-size: 10.5px;
-          line-height: 1.5;
-        "
-      >
-        <div>69340 Francheville</div>
-        <div>06 10 51 33 58</div>
-        <div>ilan.varillon@gmail.com</div>
-        <div style="display: flex; align-items: center; gap: 5px">
-          <img
-            src="Images/icons/linkedin.svg"
-            width="11"
-            height="11"
-            alt=""
-          /><a
-            href="https://www.linkedin.com/in/ilan-v-4498b891/"
-            style="color: #5da2f5"
-            >linkedin.com/in/ilan-v-4498b891</a
-          >
-        </div>
-        <div style="display: flex; align-items: center; gap: 5px">
-          <img
-            src="Images/icons/github-contact.svg"
-            width="11"
-            height="11"
-            alt=""
-          /><a href="https://github.com/i-lander" style="color: #5da2f5"
-            >github.com/i-lander</a
-          >
-        </div>
-        <div style="display: flex; align-items: center; gap: 5px">
-          <img
-            src="Images/icons/itchio.svg"
-            width="11"
-            height="11"
-            alt=""
-          /><a href="https://donkey-isle.itch.io" style="color: #5da2f5"
-            >donkey-isle.itch.io</a
-          >
-        </div>
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          background: #232323;
-          border-radius: 8px;
-          padding: 12px 10px;
-          text-align: center;
-        "
-      >
-        <img
-          src="Images/icons/qr-portfolio.png"
-          width="100"
-          height="auto"
-          alt="QR code portfolio"
-          style="border-radius: 4px; background: #ffffff; padding: 3px"
-        />
-        <div>
-          <a
-            href="https://i-lander.github.io/Resume"
-            style="color: #5da2f5"
-            >i-lander.github.io/Resume</a
-          >
-        </div>
-      </div>
-      <div>
-        <div
-          style="
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #5da2f5;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #2e2e2e;
-            padding-bottom: 4px;
-          "
-        >
-          Compétences maîtrisées
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 5px">
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/dotnet.svg"
-              width="12"
-              height="12"
-              alt=""
-            />C#</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/python.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Python</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/typescript.svg"
-              width="12"
-              height="12"
-              alt=""
-            />JS / TS</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/html5.svg"
-              width="12"
-              height="12"
-              alt=""
-            />HTML / CSS</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/react.svg"
-              width="12"
-              height="12"
-              alt=""
-            />React</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/sqlserver.svg"
-              width="12"
-              height="12"
-              alt=""
-              style="
-                filter: invert(60%) sepia(80%) saturate(400%)
-                  hue-rotate(180deg);
-              "
-            />SQL Server</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/postgresql.svg"
-              width="12"
-              height="12"
-              alt=""
-            />PostgreSQL</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/git.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Git</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/github-white.svg"
-              width="12"
-              height="12"
-              alt=""
-            />GitHub</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/docker.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Docker</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-            "
-            ><img
-              src="Images/icons/talend.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Talend</span
-          >
-        </div>
-        <div
-          style="
-            font-size: 10px;
-            line-height: 1.55;
-            color: #c8ccd3;
-            margin-top: 7px;
-          "
-        >
-          Administration BDD · Procédures stockées &amp; triggers · SSIS ·
-          SSRS
-        </div>
-      </div>
-      <div>
-        <div
-          style="
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #5da2f5;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #2e2e2e;
-            padding-bottom: 4px;
-          "
-        >
-          Notions
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 5px">
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/openjdk.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Java</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/go.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Go</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/angular.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Angular</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/vuejs.svg"
-              width="12"
-              height="12"
-              alt=""
-            />VueJs</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/nodejs.svg"
-              width="12"
-              height="12"
-              alt=""
-            />NodeJs</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/cypress.svg"
-              width="12"
-              height="12"
-              alt=""
-            />Cypress</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/mysql.svg"
-              width="12"
-              height="12"
-              alt=""
-            />MySQL</span
-          >
-          <span
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 5px;
-              background: #232323;
-              border-radius: 9999px;
-              padding: 3px 9px 3px 6px;
-              font-size: 10px;
-              font-weight: 500;
-              color: #a7abb3;
-            "
-            ><img
-              src="Images/icons/gitlab.svg"
-              width="12"
-              height="12"
-              alt=""
-            />GitLab</span
-          >
-        </div>
-      </div>
-      <div>
-        <div
-          style="
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #5da2f5;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #2e2e2e;
-            padding-bottom: 4px;
-          "
-        >
-          Langues
-        </div>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            font-size: 10.5px;
-            line-height: 1.5;
-          "
-        >
-          <div style="display: flex; align-items: center; gap: 7px">
-            <img
-              src="Images/icons/flag-fr.png"
-              width="18"
-              height="13"
-              alt="FR"
-              style="border-radius: 2px"
-            />Français — maternelle
-          </div>
-          <div style="display: flex; align-items: center; gap: 7px">
-            <img
-              src="Images/icons/flag-gb.png"
-              width="18"
-              height="13"
-              alt="EN"
-              style="border-radius: 2px"
-            />Anglais — B2 professionnel
-          </div>
-          <div style="color: #a7abb3; font-size: 10px">
-            (reviews, docs techniques, contacts clients)
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          style="
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #5da2f5;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #2e2e2e;
-            padding-bottom: 4px;
-          "
-        >
-          Formation
-        </div>
-        <div style="font-size: 10.5px; line-height: 1.6">
-          <strong style="color: #5da2f5">100 % autodidacte</strong><br />Compétences
-          acquises en autonomie : du support N1 (2012) au tech lead C# /
-          .NET.<br /><span
-            style="color: #a7abb3"
-            >2008 — BAC STI génie mécanique</span
-          >
-        </div>
-      </div>
-      <div>
-        <div
-          style="
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #5da2f5;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #2e2e2e;
-            padding-bottom: 4px;
-          "
-        >
-          Réalisations clés
-        </div>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            font-size: 10px;
-            line-height: 1.45;
-          "
-        >
-          <div>
-            <strong style="color: #5da2f5; font-size: 12.5px">4</strong>
-            développeurs montés en autonomie sur les escalades
-            L3
-          </div>
-          <div>
-            <strong style="color: #5da2f5; font-size: 12.5px"
-              >≈15h</strong
-            >
-            / mois de tâches manuelles supprimées (Python,
-            agents IA)
-          </div>
-          <div>
-            <strong style="color: #5da2f5; font-size: 12.5px"
-              >≈50</strong
-            >
-            tickets L3 traités / mois, dont ≈95&nbsp;%
-            résolus sans escalade R&amp;D
-          </div>
-        </div>
-      </div>
-    </aside>
-    <main
-      style="
+        gap: 12px;
+      }
+      .sidebar a {
+        color: #5da2f5;
+      }
+      .name {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1.35;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+      }
+      .role-badge {
+        margin-top: 8px;
+        display: inline-block;
+        background: #046aef;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 9999px;
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 10.5px;
+        line-height: 1.5;
+      }
+      .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .side-title {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #5da2f5;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #2e2e2e;
+        padding-bottom: 4px;
+      }
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: #232323;
+        border-radius: 9999px;
+        padding: 3px 9px 3px 6px;
+        font-size: 10px;
+        font-weight: 500;
+      }
+      .badge.dim {
+        color: #a7abb3;
+      }
+      .side-note {
+        font-size: 10px;
+        line-height: 1.55;
+        color: #c8ccd3;
+        margin-top: 7px;
+      }
+      .keyfacts {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        font-size: 10px;
+        line-height: 1.45;
+      }
+      .keyfacts strong {
+        color: #5da2f5;
+        font-size: 12.5px;
+      }
+      .ops-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 10.5px;
+        line-height: 1.5;
+      }
+      .langs {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 10.5px;
+        line-height: 1.5;
+      }
+      .lang-row {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .qr-box {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        background: #232323;
+        border-radius: 8px;
+        padding: 12px 10px;
+        text-align: center;
+      }
+
+      /* ---------- Main ---------- */
+      .main {
         padding: 20px 28px 16px;
         display: flex;
         flex-direction: column;
         gap: 10px;
-      "
-    >
-      <header
-        style="
-          background: #eef5fe;
-          border-radius: 8px;
-          padding: 11px 16px;
-          border-left: none;
-        "
-      >
-        <div
-          style="
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #046aef;
-          "
-        >
-          Profil
-        </div>
-        <p
-          style="
-            margin: 6px 0 0;
-            font-size: 12.5px;
-            line-height: 1.55;
-            color: #151515;
-            font-weight: 500;
-          "
-        >
-          Profil hybride Dev / Support,
-          <strong style="color: #046aef">10+ ans d'expérience</strong> en
-          éditeur de logiciels SaaS.
-          <strong style="color: #046aef">100 % autodidacte</strong> : je
-          <strong>manage une équipe technique</strong>, développe en
-          <strong>C# / .NET et Python</strong> sur un produit de gestion de
-          trésorerie, et construis des
-          <strong>agents IA internes (MCP, skills Claude)</strong> pour
-          automatiser le support.
-        </p>
-      </header>
-      <div
-        style="
-          background: #151515;
-          border-radius: 8px;
-          padding: 10px 16px;
-          color: #e8e9ec;
-        "
-      >
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 12px;
-          "
-        >
-          <div
-            style="
-              font-size: 11px;
-              font-weight: 700;
-              letter-spacing: 0.14em;
-              text-transform: uppercase;
-              color: #5da2f5;
-            "
-          >
-            Game dev en solo · code · art · game design
-          </div>
-          <a
-            href="https://donkey-isle.itch.io"
-            style="
-              color: #5da2f5;
-              font-size: 10.5px;
-              font-weight: 700;
-              white-space: nowrap;
-            "
-            >donkey-isle.itch.io</a
-          >
-        </div>
-        <p
-          style="
-            margin: 5px 0 0;
-            font-size: 10.5px;
-            line-height: 1.55;
-            color: #e8e9ec;
-          "
-        >
-          <strong style="color: #ffffff"
-            >4 jeux conçus, développés et publiés seul, de l'idée à la
-            mise en ligne</strong
-          >
+      }
+      .section-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #046aef;
+      }
+      .profile {
+        background: #eef5fe;
+        border-radius: 8px;
+        padding: 11px 16px;
+      }
+      .profile p {
+        margin: 6px 0 0;
+        font-size: 12.5px;
+        line-height: 1.55;
+        color: #151515;
+        font-weight: 500;
+      }
+      .profile strong {
+        color: #046aef;
+      }
+      .xp-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .xp {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .xp-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .xp-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: #151515;
+      }
+      .xp-name span {
+        font-weight: 500;
+        color: #5b6570;
+      }
+      .xp-dates {
+        font-size: 10px;
+        font-weight: 700;
+        color: #046aef;
+        background: #eef5fe;
+        padding: 2px 9px;
+        border-radius: 9999px;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      .xp ul {
+        margin: 0;
+        padding-left: 16px;
+        font-size: 10.5px;
+        line-height: 1.45;
+        color: #39434c;
+      }
+      .xp li strong {
+        color: #151515;
+      }
+      .divider {
+        height: 1px;
+        background: #e3e5e8;
+      }
+      .prev-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        font-size: 10.5px;
+        line-height: 1.45;
+        color: #39434c;
+      }
+      .prev-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .prev-row strong {
+        color: #151515;
+      }
+      .prev-dates {
+        color: #046aef;
+        font-weight: 700;
+        background: #eef5fe;
+        padding: 2px 9px;
+        border-radius: 9999px;
+        align-self: start;
+        white-space: nowrap;
+        font-size: 10px;
+      }
 
-          : concept, game design, code (TypeScript / Phaser&nbsp;3), art,
-          publication itch.io et Play Store (Capacitor, Electron).<br />
-          <span style="color: #c8ccd3"
-            >Epitaph · Genesis: Age of Creation · The Cliff Whisper ·
-            Juice Juicy Juice : en autonomie totale, par goût du
-            challenge.</span
-          >
-        </p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <div
-          style="
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #046aef;
-          "
-        >
-          Expériences professionnelles
+      /* Footer projets perso : encart sombre, colle en bas de page */
+      .perso {
+        margin-top: auto;
+        background: #151515;
+        border-radius: 8px;
+        padding: 8px 14px;
+        color: #e8e9ec;
+      }
+      .perso-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .perso-title {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #5da2f5;
+      }
+      .perso p {
+        margin: 4px 0 0;
+        font-size: 10px;
+        line-height: 1.5;
+        color: #e8e9ec;
+      }
+      .perso strong {
+        color: #ffffff;
+      }
+      .perso a {
+        color: #5da2f5;
+        font-size: 10px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .perso .games {
+        color: #c8ccd3;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page" id="p1" data-screen-label="CV">
+      <aside class="sidebar">
+        <div>
+          <div class="name">Ilan<br />VARILLON</div>
+          <div class="role-badge">Manager · Tech Lead</div>
         </div>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              Agicap
-              <span style="font-weight: 500; color: #5b6570"
-                >— Manager / Tech Lead Support Développeur</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              depuis juil. 2025
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>
-              Management de 4 développeurs au sein du support technique :
-              montée en compétence, formation continue
-            </li>
-            <li>
-              <strong style="color: #151515"
-                >Développement d'agents IA internes</strong
-              >
-              (MCP, skills Claude) pour automatiser la pré-investigation
-              des tickets : <strong>≈15 h/mois</strong> gagnées sur
-              l'équipe
-            </li>
-            <li>
-              Tech lead C# sur un SaaS de gestion de trésorerie : code
-              review GitHub, développement de features, correction de bugs
-              sur les modules métier (prévisionnel, encaissements,
-              documents business)
-            </li>
-            <li>
-              Développement d'interfaces support internes et de pipelines
-              de correction de données (factures, avoirs, commandes,
-              devis)
-            </li>
-            <li>
-              Interventions en écriture sur les BDD de production SQL
-              Server et PostgreSQL · monitoring actif
-            </li>
-            <li>
-              Automatisation Python · escalades L3 · création de process
-              et pilotage de projets de bout en bout
-            </li>
-          </ul>
-        </article>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              TheGreenShot
-              <span style="font-weight: 500; color: #5b6570"
-                >— Ingénieur support</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              juin 2024 – juil. 2025
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>
-              Contributions au produit en VueJs / Go / Java (correction de
-              bugs, petites features) · création de tests e2e
-            </li>
-            <li>
-              Déploiement et maintenance via Docker Compose · Git / GitHub
-            </li>
-            <li>
-              Création de process Talend et d'interfaces vers API clients
-              · intégration comptable · bilan carbone
-            </li>
-          </ul>
-        </article>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              XiVO
-              <span style="font-weight: 500; color: #5b6570"
-                >— Développeur FullStack</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              déc. 2023 – juin 2024
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>
-              Développement applicatif full-stack open source · JavaScript
-              / React / Python
-            </li>
-            <li>
-              Matrix Server / Element Web · DevOps · Docker · tests e2e
-              Cypress · Git / GitLab
-            </li>
-          </ul>
-        </article>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              Semarchy
-              <span style="font-weight: 500; color: #5b6570"
-                >— Ingénieur support Data</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              mai 2023 – déc. 2023
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>
-              Analyse d'environnements complexes · traitement d'incidents
-              et remontée de bugs
-            </li>
-            <li>
-              Développement et debug de flux ETL · maîtrise de connecteurs
-              BDD variés (Oracle, MySQL, PG, SQL Server)
-            </li>
-            <li>
-              Développement, déploiement et maintenance de webservices
-            </li>
-          </ul>
-        </article>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              Lumapps
-              <span style="font-weight: 500; color: #5b6570"
-                >— Support Développeur</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              sept. 2021 – mai 2023
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>Référent support &amp; gestion des escalades L3</li>
-            <li>
-              Correction de bugs frontend/backend (React, Angular, Python)
-              et développement de features
-            </li>
-            <li>
-              Réalisation / adaptation de tests unitaires · mise à jour
-              des Storybooks
-            </li>
-            <li>
-              Automatisation via APIs produit : ≈10 h/mois de
-              traitements manuels supprimés
-            </li>
-          </ul>
-        </article>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              Dimosoftware
-              <span style="font-weight: 500; color: #5b6570"
-                >— Référent Applicatif</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              sept. 2019 – sept. 2021
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>
-              Deux passages dans l'entreprise : Support Applicatif
-              (nov. 2016 – juin 2018), puis Référent Applicatif et référent
-              SQL de l'équipe sur le progiciel Notilus
-            </li>
-            <li>
-              Formateur auprès des clients et des équipes internes ·
-              création de flux Talend · notions de comptabilité
-            </li>
-          </ul>
-        </article>
-        <article style="display: flex; flex-direction: column; gap: 3px">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: baseline;
-              gap: 12px;
-            "
-          >
-            <div
-              style="font-size: 13px; font-weight: 700; color: #151515"
-            >
-              CGI (ex-Umanis)
-              <span style="font-weight: 500; color: #5b6570"
-                >— Team Leader consultant BI</span
-              >
-            </div>
-            <div
-              style="
-                font-size: 10px;
-                font-weight: 600;
-                color: #046aef;
-                white-space: nowrap;
-                font-variant-numeric: tabular-nums;
-              "
-            >
-              juin 2019 – sept. 2019
-            </div>
-          </div>
-          <ul
-            style="
-              margin: 0;
-              padding-left: 16px;
-              font-size: 10.5px;
-              line-height: 1.45;
-              color: #39434c;
-            "
-          >
-            <li>
-              Coordination d'une équipe de 5 consultants : gestion de
-              planning &amp; ressources, gestion de projet
-            </li>
-            <li>Référent SQL · développement SSIS / SSRS · C#</li>
-          </ul>
-        </article>
-      </div>
-      <div style="height: 1px; background: #e3e5e8"></div>
-      <div style="display: flex; flex-direction: column; gap: 6px">
-        <div
-          style="
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #046aef;
-          "
-        >
-          Parcours antérieur
-        </div>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4px;
-            font-size: 10.5px;
-            line-height: 1.45;
-            color: #39434c;
-          "
-        >
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              gap: 12px;
-            "
-          >
-            <span
-              ><strong style="color: #151515"
-                >Mérieux Nutriscience</strong
-              >
-              — Analyste SQL · développement sur logiciel LIMS Basics,
-              requêtage et analyse SQL</span
-            ><span
-              style="
-                color: #046aef;
-                font-weight: 600;
-                white-space: nowrap;
-                font-size: 10px;
-              "
-              >juin 2018 – juin 2019</span
+        <div class="contact">
+          <div>69340 Francheville</div>
+          <div>06 10 51 33 58</div>
+          <div>ilan.varillon@gmail.com</div>
+          <div class="contact-row">
+            <img src="Images/icons/linkedin.svg" width="11" height="11" alt="" /><a
+              href="https://www.linkedin.com/in/ilan-v-4498b891/"
+              >linkedin.com/in/ilan-v-4498b891</a
             >
           </div>
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              gap: 12px;
-            "
-          >
-            <span
-              ><strong style="color: #151515"
-                >Teleperformance, Alten, AVEM</strong
-              >
-              — Technicien Support Applicatif · relation client,
-              traitement des remontées hotline, analyse technique N1 /
-              N2</span
-            ><span
-              style="
-                color: #046aef;
-                font-weight: 600;
-                white-space: nowrap;
-                font-size: 10px;
-              "
-              >2012 – nov. 2016</span
+          <div class="contact-row">
+            <img
+              src="Images/icons/github-contact.svg"
+              width="11"
+              height="11"
+              alt=""
+            /><a href="https://github.com/i-lander">github.com/i-lander</a>
+          </div>
+          <div class="contact-row">
+            <img src="Images/icons/itchio.svg" width="11" height="11" alt="" /><a
+              href="https://donkey-isle.itch.io"
+              >donkey-isle.itch.io</a
             >
           </div>
         </div>
-      </div>
-    </main>
-  </section>
+        <div>
+          <div class="side-title">Réalisations clés</div>
+          <div class="keyfacts">
+            <div>
+              <strong>4</strong> développeurs montés en autonomie sur les
+              escalades L3
+            </div>
+            <div>
+              <strong>≈50</strong> tickets L3 traités / mois, dont ≈95&nbsp;%
+              résolus sans escalade R&amp;D
+            </div>
+            <div>
+              <strong>≈15h</strong> / mois de tâches manuelles supprimées
+              (Python, agents IA)
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="side-title">Support &amp; Ops</div>
+          <div class="ops-list">
+            <div>Escalades L3 · gestion d'incidents</div>
+            <div>Monitoring Grafana (Loki, Prometheus, Tempo)</div>
+            <div>Agents IA internes (MCP, skills Claude)</div>
+            <div>Interventions en BDD de production</div>
+          </div>
+        </div>
+        <div>
+          <div class="side-title">Compétences maîtrisées</div>
+          <div class="badges">
+            <span class="badge"
+              ><img src="Images/icons/dotnet.svg" width="12" height="12" alt="" />C#</span
+            >
+            <span class="badge"
+              ><img src="Images/icons/python.svg" width="12" height="12" alt="" />Python</span
+            >
+            <span class="badge"
+              ><img
+                src="Images/icons/sqlserver.svg"
+                width="12"
+                height="12"
+                alt=""
+                style="
+                  filter: invert(60%) sepia(80%) saturate(400%)
+                    hue-rotate(180deg);
+                "
+              />SQL Server</span
+            >
+            <span class="badge"
+              ><img
+                src="Images/icons/postgresql.svg"
+                width="12"
+                height="12"
+                alt=""
+              />PostgreSQL</span
+            >
+            <span class="badge"
+              ><img src="Images/icons/git.svg" width="12" height="12" alt="" />Git</span
+            >
+            <span class="badge"
+              ><img
+                src="Images/icons/github-white.svg"
+                width="12"
+                height="12"
+                alt=""
+              />GitHub</span
+            >
+            <span class="badge"
+              ><img src="Images/icons/docker.svg" width="12" height="12" alt="" />Docker</span
+            >
+            <span class="badge"
+              ><img src="Images/icons/talend.svg" width="12" height="12" alt="" />Talend</span
+            >
+          </div>
+          <div class="side-note">
+            Administration BDD · Procédures stockées &amp; triggers · SSIS ·
+            SSRS
+          </div>
+        </div>
+        <div>
+          <div class="side-title">Notions</div>
+          <div class="badges">
+            <span class="badge dim"
+              ><img
+                src="Images/icons/typescript.svg"
+                width="12"
+                height="12"
+                alt=""
+              />JS / TS</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/react.svg" width="12" height="12" alt="" />React</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/html5.svg" width="12" height="12" alt="" />HTML / CSS</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/openjdk.svg" width="12" height="12" alt="" />Java</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/go.svg" width="12" height="12" alt="" />Go</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/nodejs.svg" width="12" height="12" alt="" />NodeJs</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/mysql.svg" width="12" height="12" alt="" />MySQL</span
+            >
+            <span class="badge dim"
+              ><img src="Images/icons/gitlab.svg" width="12" height="12" alt="" />GitLab</span
+            >
+          </div>
+        </div>
+        <div>
+          <div class="side-title">Langues</div>
+          <div class="langs">
+            <div class="lang-row">
+              <img
+                src="Images/icons/flag-fr.png"
+                width="18"
+                height="13"
+                alt="FR"
+                style="border-radius: 2px"
+              />Français · maternelle
+            </div>
+            <div class="lang-row">
+              <img
+                src="Images/icons/flag-gb.png"
+                width="18"
+                height="13"
+                alt="EN"
+                style="border-radius: 2px"
+              />Anglais · B2 professionnel
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="side-title">Formation</div>
+          <div style="font-size: 10.5px; line-height: 1.6">
+            Parcours autodidacte : du support N1 (2012) au management d'une
+            équipe support technique.<br /><span style="color: #a7abb3"
+              >2008 · BAC STI génie mécanique</span
+            >
+          </div>
+        </div>
+        <div class="qr-box">
+          <img
+            src="Images/icons/qr-portfolio.png"
+            width="84"
+            height="auto"
+            alt="QR code portfolio"
+            style="border-radius: 4px; background: #ffffff; padding: 3px"
+          />
+          <div>
+            <a href="https://i-lander.github.io/Resume"
+              >i-lander.github.io/Resume</a
+            >
+          </div>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="profile">
+          <div class="section-title">Profil</div>
+          <p>
+            <strong>Manager d'une équipe de 4 développeurs support</strong>
+            (escalades L3) et
+            <strong>tech lead sur toute la stack</strong> (C# / .NET, Python,
+            front, BDD) chez un éditeur SaaS de gestion de trésorerie.
+            <strong>10+ ans d'expérience</strong> en support technique chez
+            des éditeurs de logiciels, <strong>100 % autodidacte</strong>. Je
+            construis aussi des
+            <strong>agents IA internes (MCP, skills Claude)</strong> pour
+            automatiser le support.
+          </p>
+        </header>
+        <div class="xp-list">
+          <div class="section-title">Expériences professionnelles</div>
+          <article class="xp">
+            <div class="xp-head">
+              <div class="xp-name">
+                Agicap
+                <span>· Manager / Tech Lead Support Développeur</span>
+              </div>
+              <div class="xp-dates">depuis juil. 2025</div>
+            </div>
+            <ul>
+              <li>
+                <strong>Management de 4 développeurs support</strong> : 1:1,
+                priorisation, création de process d'équipe, montée en
+                autonomie complète sur les escalades L3
+              </li>
+              <li>
+                Pilotage du flux d'escalades L3 : <strong>≈50
+                tickets/mois, ≈95&nbsp;% résolus sans escalade R&amp;D</strong> ·
+                interface avec la R&amp;D et le Customer Success
+              </li>
+              <li>
+                Développement d'agents IA internes (MCP, skills Claude) pour
+                la pré-investigation des tickets : <strong>≈15 h/mois</strong>
+                gagnées sur l'équipe
+              </li>
+              <li>
+                <strong>Tech lead sur l'ensemble de la stack</strong> (C# /
+                .NET, front, Python, BDD) : code review GitHub, features et
+                corrections sur les modules métier (prévisionnel,
+                encaissements, documents business)
+              </li>
+              <li>
+                Interfaces support internes, pipelines de correction de
+                données, interventions en écriture sur les BDD de production
+                (SQL Server, PostgreSQL) · monitoring Grafana
+              </li>
+            </ul>
+          </article>
+          <article class="xp">
+            <div class="xp-head">
+              <div class="xp-name">
+                TheGreenShot <span>· Ingénieur support</span>
+              </div>
+              <div class="xp-dates">juin 2024 – juil. 2025</div>
+            </div>
+            <ul>
+              <li>
+                Contributions au produit en VueJs / Go / Java (correction de
+                bugs, petites features) · création de tests e2e
+              </li>
+              <li>
+                Déploiement et maintenance via Docker Compose · Git / GitHub
+              </li>
+              <li>
+                Création de process Talend et d'interfaces vers API clients ·
+                intégration comptable · bilan carbone
+              </li>
+            </ul>
+          </article>
+          <article class="xp">
+            <div class="xp-head">
+              <div class="xp-name">
+                XiVO <span>· Développeur FullStack</span>
+              </div>
+              <div class="xp-dates">déc. 2023 – juin 2024</div>
+            </div>
+            <ul>
+              <li>
+                Développement applicatif full-stack open source · JavaScript /
+                React / Python
+              </li>
+              <li>
+                Matrix Server / Element Web · DevOps · Docker · tests e2e
+                Cypress · Git / GitLab
+              </li>
+            </ul>
+          </article>
+          <article class="xp">
+            <div class="xp-head">
+              <div class="xp-name">
+                Semarchy <span>· Ingénieur support Data</span>
+              </div>
+              <div class="xp-dates">mai 2023 – déc. 2023</div>
+            </div>
+            <ul>
+              <li>
+                Analyse d'environnements complexes · traitement d'incidents et
+                remontée de bugs
+              </li>
+              <li>
+                Développement et debug de flux ETL · connecteurs BDD variés
+                (Oracle, MySQL, PG, SQL Server) · webservices
+              </li>
+            </ul>
+          </article>
+          <article class="xp">
+            <div class="xp-head">
+              <div class="xp-name">
+                Lumapps <span>· Support Développeur</span>
+              </div>
+              <div class="xp-dates">sept. 2021 – mai 2023</div>
+            </div>
+            <ul>
+              <li>Référent support &amp; gestion des escalades L3</li>
+              <li>
+                Correction de bugs frontend/backend (React, Angular, Python)
+                et développement de features
+              </li>
+              <li>
+                Automatisation via APIs produit : ≈10 h/mois de traitements
+                manuels supprimés · tests unitaires · Storybooks
+              </li>
+            </ul>
+          </article>
+          <article class="xp">
+            <div class="xp-head">
+              <div class="xp-name">
+                Dimosoftware <span>· Référent Applicatif</span>
+              </div>
+              <div class="xp-dates">
+                nov. 2016 – sept. 2021 (deux passages)
+              </div>
+            </div>
+            <ul>
+              <li>
+                Support Applicatif (2016 – 2018), puis Référent Applicatif et
+                référent SQL de l'équipe sur le progiciel Notilus
+              </li>
+              <li>
+                Formateur auprès des clients et des équipes internes ·
+                création de flux Talend · notions de comptabilité
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="divider"></div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <div class="section-title">Parcours antérieur</div>
+          <div class="prev-list">
+            <div class="prev-row">
+              <span
+                ><strong>CGI (ex-Umanis)</strong> · Team Leader consultant BI ·
+                coordination de 5 consultants (planning, ressources), référent
+                SQL, SSIS / SSRS, C#</span
+              ><span class="prev-dates">juin 2019 – sept. 2019</span>
+            </div>
+            <div class="prev-row">
+              <span
+                ><strong>Mérieux Nutriscience</strong> · Analyste SQL ·
+                développement sur logiciel LIMS Basics, requêtage et analyse
+                SQL</span
+              ><span class="prev-dates">juin 2018 – juin 2019</span>
+            </div>
+            <div class="prev-row">
+              <span
+                ><strong>Teleperformance, Alten, AVEM</strong> · Technicien
+                Support Applicatif · relation client, hotline, analyse
+                technique N1 / N2</span
+              ><span class="prev-dates">2012 – nov. 2016</span>
+            </div>
+          </div>
+        </div>
+        <div class="perso">
+          <div class="perso-head">
+            <div class="perso-title">
+              Game dev en solo · code · art · game design
+            </div>
+            <a href="https://donkey-isle.itch.io">donkey-isle.itch.io</a>
+          </div>
+          <p>
+            <strong
+              >4 jeux conçus, développés et publiés seul, de l'idée à la mise
+              en ligne</strong
+            >
+            : concept, game design, code (TypeScript / Phaser&nbsp;3), art,
+            publication itch.io et Play Store (Capacitor, Electron).<br />
+            <span class="games"
+              >Epitaph · Genesis: Age of Creation · The Cliff Whisper · Juice
+              Juicy Juice : en autonomie totale, par goût du challenge.</span
+            >
+          </p>
+        </div>
+      </main>
+    </section>
   </body>
 </html>
